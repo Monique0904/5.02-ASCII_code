@@ -1,0 +1,55 @@
+#start program
+
+#input section
+
+	#set up variable quote and set it equal to "'You have bewitched me body and soul and I love, love, love you' - Mr. Darcy"
+	#set up an empty list named bookQuote
+	#set up variable guess and set it equal to the users input
+	#set up list quote2 and set it equal to the ascii equivalent of the quote 
+	#set up an empty variable named quotept2
+
+#processing section
+
+	#for variable m in sequence quote append ordinal m to the list bookQuote
+	#for variable c in sequence bookQuote print c
+	#for variable q in sequence quote2 set quotept2 equal to quotept2 + chr(q)    
+	#if guess is equal to quote display "\n\nYou got it right!" and "The quote is: " + quotept2
+	#else display "\n\nNot quite!" and "The quote is: " + quotept2
+	
+#output section
+
+	#display "This is the encoded message:" and indent 
+	#display encoded message in ASCII
+	#display message based on whether what the user put inputed was correct or not
+	#display the decoded quote
+
+#eop
+
+def main():
+	
+	quote = "'You have bewitched me body and soul and I love, love, love you' - Mr. Darcy"
+    bookQuote = []
+	print("This is the encoded message:\n")
+	
+  for m in quote:
+     bookQuote.append(ord(m))
+
+  for c in bookQuote:
+     print(c),
+		
+	guess = input("Try to guess the quote is!")
+	quote2 = [39, 89, 111, 117, 32, 104, 97, 118, 101, 32, 98, 101, 119, 105, 116, 99, 104, 101, 100, 32, 109, 101, 32, 98, 111, 100, 121, 32, 97, 110, 100, 32, 115, 111, 117, 108, 32, 97, 110, 100, 32, 73, 32, 108, 111, 118, 101, 44, 32, 108, 111, 118, 101, 44, 32, 108, 111, 118, 101, 32, 121, 111, 117, 39, 32, 45, 32, 77, 114, 46, 32, 68, 97, 114, 99, 121]
+	quotept2 = ""
+
+   for q in quote2:
+       quotept2 = quotept2 + chr(q)
+
+    
+	if(guess == quote):
+		print("\n\nYou got it right!")
+		print("The quote is: " + quotept2)
+	else:
+		print("\n\nNot quite!")
+		print("The quote is: " + quotept2)
+ 		          														 
+main()
